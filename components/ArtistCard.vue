@@ -1,36 +1,26 @@
 <template>
-  <div>
-    <div class="h-44 sm:w-60 w-3/4 absolute flex justify-center items-center">
+  <div class="cursor-pointer hover:shadow-lg hover:opacity-80 rounded-full">
+    <div class="h-28 sm:w-60 w-3/4 absolute flex justify-center items-center">
       <img class="object-cover h-20 w-20 rounded-full" :src="artist.picture.medium" alt="profile picture" />
     </div>
 
-    <div class="h-44 mx-4 w-full bg-blue-400 rounded-3xl shadow-md sm:mx-0">
-      <div class="h-1/2 w-full flex justify-between items-baseline px-3 py-5">
-        <!-- <h1 class="text-white">{{ artist.location.country }}</h1> -->
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1"
-            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-          />
-        </svg> -->
-      </div>
+    <div class="h-40 mx-4 w-full bg-opacity-80 bg-yellow-500 rounded-3xl shadow-md sm:mx-0">
+      <div class="h-1/3 w-full flex justify-between items-baseline px-2 py-5"></div>
 
-      <div class="bg-white h-1/2 w-full rounded-3xl flex flex-col justify-around items-center">
-        <div class="w-full h-1/2 flex justify-between items-center px-3 pt-2">
+      <div class="bg-white dark:bg-gray-700 h-2/3 w-full rounded-3xl flex flex-col justify-around items-center">
+        <div class="w-full h-1/2 flex justify-between items-center px-2 pt-2">
           <div class="flex flex-col justify-center items-center">
-            <h1 class="text-gray-500 text-xs">Age</h1>
-            <h1 class="text-gray-600 text-sm">{{ artist.dob.age }}</h1>
+            <h1 class="text-gray-500 dark:text-white text-xs">Age</h1>
+            <h1 class="text-gray-600 dark:text-white text-xs font-bold">{{ artist.dob.age }}</h1>
           </div>
           <div class="flex flex-col justify-center items-center">
-            <h1 class="text-gray-500 text-xs">Spent</h1>
-            <h1 class="text-gray-600 text-sm">$2,004</h1>
+            <h1 class="text-gray-500 dark:text-white text-xs">From</h1>
+            <h1 class="text-gray-600 dark:text-white text-xs font-bold">{{ artist.location.country }}</h1>
           </div>
         </div>
         <div class="w-full h-1/2 mb-2 flex flex-col justify-center items-center">
-          <h1 class="text-gray-700 font-bold">{{ artist.name.first }} {{ artist.name.last }}</h1>
-          <h1 class="text-gray-500 text-sm">{{ artist.email }}</h1>
+          <h1 class="text-gray-700 dark:text-white font-bold">{{ artist.name.first }} {{ artist.name.last }}</h1>
+          <h1 class="text-gray-500 dark:text-white text-sm">{{ artist.email }}</h1>
         </div>
       </div>
     </div>
